@@ -51,11 +51,17 @@ app.delete("/delete/:id", (req, res) => __awaiter(void 0, void 0, void 0, functi
 }));
 const openDb = () => {
     const pool = new pg_1.Pool({
-        user: 'postgres',
-        host: 'localhost',
-        database: 'todo',
-        password: 'salendra',
-        port: 5432
+        // user: 'postgres',
+        // host:'localhost',
+        // database: 'todo',
+        // password: 'salendra',
+        // port: 5432
+        user: 'root',
+        host: 'dpg-chdbm52k728l991cr98g-a.oregon-postgres.render.com',
+        database: 'todo_cnnk',
+        password: 'pNICTSZJvnUgqaPMVVSKQ6kuhTrndTRS',
+        port: 5432,
+        ssl: true
     });
     return pool;
 };
